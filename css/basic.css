@@ -18,6 +18,7 @@ z-index: 100;
 header.on{}
 header.on .header_top{height: 0;overflow: hidden;margin-top: -1px;}
 header.on .gnb.rotate{
+    background: #000 !important;
 margin-top: 0;
 height: 39px;
 padding-top: 0;
@@ -53,10 +54,25 @@ header.on h1 {width: 30px;position: absolute;top: 3px;left: 150px;z-index: 2;tra
 .on .gnb .tabMenu > li > a{pointer-events: none;}
 .on .gnb .tabMenu > li {position: relative;}
 .on .gnb .tabMenu > li:hover {} 
+.on .gnb .tabMenu > li:nth-child(6) .subMenu{  
+    left: 50%;
+    transform: translateX(-50%);
+}
+.on .gnb .tabMenu > li:nth-child(9) .subMenu{  
+    left: 50%;
+    transform: translateX(-50%);
+}
 .on .gnb .tabMenu > li .subMenu{    position: absolute;
     top: 17px;
-    left: 0;
-    padding: 12px; } 
+    left: 0px;
+    padding: 12px;
+    
+} 
+/* .on .gnb .tabMenu > li:nth-child(6) .subMenu{left: 20px;} */
+
+/* header.on .gnb .h_inner ul li:hover .subMenu{left:20px} */
+/* header .gnb .h_inner ul.tabMenu li:nth-child(6):hover .subMenu{} */
+
 .on .gnb .tabMenu > li .subMenu::before{
     content: '';
     position: absolute;
@@ -67,13 +83,13 @@ header.on h1 {width: 30px;position: absolute;top: 3px;left: 150px;z-index: 2;tra
     z-index: -1;
 } 
 .on .gnb .tabMenu > li .subMenu li{    float: inherit;width: 100%;background: #fff;transition:0.3s} 
-.on .gnb .tabMenu > li .subMenu li a{    font-size: 14px;font-weight: 400; display: inline-block;padding: 8px 10px;white-space: nowrap;text-align: left;transition: 0.3s;} 
+.on .gnb .tabMenu > li .subMenu li a{  color:#000;  font-size: 14px;font-weight: 400; display: inline-block;padding: 8px 10px;white-space: nowrap;text-align: left;transition: 0.3s;} 
 .on .gnb .tabMenu > li .subMenu li:hover {background: rgb(255, 217, 0);    } 
 .on .gnb .tabMenu > li .subMenu li:hover a{padding-left: 13px;    } 
 .on .gnb .tabMenu > li.on .subMenu{display: block;} 
 header .topBtn{opacity: 0;}
 header.on .topBtn{position: absolute;top: 15px;right:150px;width: 20px;height: 20px;background: 
-    none;border: 4px solid #000;
+    none;border: 4px solid #fff;
     border-right-color: transparent !important;
     border-bottom-color: transparent !important;
     transform: rotate(45deg);cursor: pointer;opacity: .7;transition: 0.3s;}
@@ -224,6 +240,7 @@ header .gnb .h_inner ul li a{color:#000 ;position: relative;
     font-family:'Noto Sans KR' ;
 
 }
+header.on .gnb .h_inner ul li a{color: #fff;font-weight: 500;;}
 
 .tabBody{ width:100%;height: 0px;background: #ffd900;
     margin-top: -90px !important;
@@ -2000,7 +2017,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
             transform: skewY(0deg);
         }
         header .gnb .h_inner ul li a{padding: 15px 150px;text-align: left;font-size: 24px;}
-        header.on .gnb .h_inner ul li a{padding-left: 150px !important;}
+        header.on .gnb .h_inner ul li a{padding-left: 150px !important;color: #000;}
         header .gnb .h_inner ul li:nth-child(2) a{padding-left: 145px;}
         header .gnb .h_inner ul li:nth-child(3) a{padding-left: 145px;}
         header .gnb .h_inner ul li:nth-child(4) a{padding-left: 140px;}
@@ -2087,6 +2104,10 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
             transform: rotate(0deg);
 
         }
+        .on .bng_btn span{ background: #fff;}
+        .on .bng_btn::after{background: #fff;}
+        .on .bng_btn::before{background: #fff;}
+
         .bng_btn span{ 
             display: block;
             background: #000;
@@ -2186,7 +2207,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
 
                 width: 15px;
                 height: 18px;
-                border: 3px solid #000;
+                border: 3px solid #fff;
 
             }
 

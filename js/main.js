@@ -203,7 +203,9 @@ function removeOpacity() {
 }
 
 tabMenua.forEach(function (e, index) {
-  e.addEventListener('click', function () {
+  
+  e.addEventListener('click', function (event) {
+    event.preventDefault(); // 상단 이동 기본 동작 막기
     if (index === 1 || index === 2) { // check if clicked tab is 1 or 2
       //window.location.href = e.querySelector('a').getAttribute('href'); // redirect to the link
       this.classList.remove('active');
@@ -317,6 +319,20 @@ window.addEventListener('scroll',function(){
         header.classList.add('on');
         // tabMenu.classList.add('on')
         // console.log(tabMenu)
+      tabBodybu.classList.remove('active'); // 탭 내용에서 활성화 클래스 제거
+      gnb.style.backgroundColor = clickedColor; // gnb 배경색 변경
+      gnb.classList.remove('active'); // gnb에 활성화 클래스 제거
+      document.querySelector('#logoc').src = 'img/logo-1und1_s.svg'; // 탭이 닫힐 때 이미지 변경
+
+      for (let i = 0; i < tabMenua.length; i++) {
+        tabMenua[i].classList.remove('active'); // 탭 내용에서 활성화 클래스 제거
+      }
+      for (let i = 0; i < tabBodyItems.length; i++) {
+        tabBodyItems[i].classList.remove('active'); // 탭 내용에서 활성화 클래스 제거
+      }
+      tabMenua.forEach(function(a) {
+        a.style.opacity = 1;  // 모든 탭 메뉴 아이템에 대해 opacity 값을 0.5로 설정
+      });
 
     }else{
       if(this.window.scrollY > 500 || this.window.scrollY > pos.status){
@@ -454,7 +470,7 @@ headerTopBtn.addEventListener('click', function () {
   bngBtn.addEventListener('click', function () {
       
       if (this.classList.contains('on') ) {
-        topBtn.style.border = '4px solid #000';
+        // topBtn.style.border = '4px solid #000';
 
         this.classList.remove('on')
         tabMenuOn.classList.remove('on')
