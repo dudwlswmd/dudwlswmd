@@ -1979,7 +1979,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
         header .header_top.on .cuver{height: 210px;}
 
 
-
+        header.on .gnb .h_inner ul li:hover .subMenu{display: none;}
 
 
 
