@@ -205,11 +205,12 @@ function removeOpacity() {
 tabMenua.forEach(function (e, index) {
   
   e.addEventListener('click', function (event) {
-    event.preventDefault(); // 상단 이동 기본 동작 막기
-    if (index === 1 || index === 2) { // check if clicked tab is 1 or 2
-      //window.location.href = e.querySelector('a').getAttribute('href'); // redirect to the link
+    if (index === 1 || index === 2) { // 인덱스 1,2번
+      // window.location.href = e.querySelector('a').getAttribute('href'); // redirect to the link
       this.classList.remove('active');
+      console.log('링크타고들어가라')
       return; // exit the function to prevent showing tab content
+      
     }
     if (this.classList.contains('active')) { // 현재 탭이 이미 활성화된 경우
       this.classList.remove('active'); // 탭 메뉴에서 활성화 클래스 제거
@@ -217,6 +218,7 @@ tabMenua.forEach(function (e, index) {
       tabBody[num].classList.remove('active'); // 현재 활성화된 탭 내용에서 활성화 클래스 제거
       gnb.style.backgroundColor = clickedColor; // gnb 배경색 변경
       gnb.classList.remove('active'); // gnb에 활성화 클래스 제거
+      event.preventDefault(); // 상단 이동 기본 동작 막기
 
       tabMenua.forEach(function(a) {
         a.style.color = defaultColor; // 모든 탭 메뉴 항목의 글자색을 기본색상으로 설정
@@ -225,6 +227,8 @@ tabMenua.forEach(function (e, index) {
       });
       //num = 0;
     } else { // 현재 탭이 활성화되어 있지 않은 경우
+    event.preventDefault(); // 상단 이동 기본 동작 막기
+
       tabBody[num].classList.remove('active'); // 현재 활성화된 탭 내용에서 활성화 클래스 제거
       tabMenua[num].classList.remove('active'); // 현재 활성화된 탭 메뉴에서 활성화 클래스 제거
       this.classList.add('active'); // 클릭한 탭 메뉴에서 활성화 클래스 추가
