@@ -1783,7 +1783,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
         .content4 .inner {width: 90%;padding: 100px 20px 0;}
         .content4 img{right:0}
         header .gnb .h_inner ul{left:23%;}
-        header .gnb{height: 165px;;}
+        header .gnb{height: 160px;;}
         .swiper-container.visual{margin-top: 115px;}
     }
     @media screen and (max-width:1500px) {
@@ -2004,10 +2004,12 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
 
 
         header h1 {
-            top: 29px;
+            top: 11px;
+            left:155px;
         }
         header h2 {
-            top: 29px;
+            top: 19px;
+            left:260px;
         }
         header .gnb{padding-top:0}
         header .gnb .h_inner ul li{float: initial;width: 100% !important;
@@ -2080,7 +2082,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
             -ms-transform: skewY(0deg);
             transform: skewY(0deg);
         }
-        .bng_btn{display: block; position:absolute;top:130px;right:165px;border: 0;font-size: 0;text-indent: -99999px;
+        .bng_btn{display: block; position:absolute;top:120px;right:160px;border: 0;font-size: 0;text-indent: -99999px;
             cursor: pointer;width: 40px;height: 5px;background: inherit;
             -webkit-transform: rotate(4.5deg);
             -moz-transform: rotate(4.5deg);
@@ -2205,8 +2207,8 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
             .on .bng_btn.on::before{top:0px;}
             header.on .topBtn {
 
-                width: 15px;
-                height: 18px;
+                width: 20px;
+                height: 20px;
                 border: 3px solid #fff;
 
             }
@@ -2381,7 +2383,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
 
 
 
-            .footer_con2{padding:10px 0 80px;margin-bottom: 50px;}
+            .footer_con2{padding:10px 0 80px;margin-bottom: 5px;height: 450px;;}
             .footer_con2 .inner{width: 100%;}
             .tab_menu .list .btn{font-size:16px; }
             .tab_menu .list li{padding: 0;}
