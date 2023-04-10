@@ -2207,7 +2207,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
             .tabBody.active{top:73px;}
             .swiper-container.visual{margin-top: 95px;;}
 
-            .on .bng_btn{right:175px;}
+            .on .bng_btn{right:165px;top:17px;}
             .on .bng_btn span{width: 30px;height: 4px;}
             .on .bng_btn::after{width: 30px;height: 4px;top:8px;}
             .on .bng_btn.on::after{top:0px;}
@@ -2423,6 +2423,7 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
                 text-align: center;
                 top: 3px;
                 right: 140px;
+                border:none !important;
             }
             
             header.on .topBtn img{display: block;}
