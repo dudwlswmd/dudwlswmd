@@ -93,6 +93,14 @@ header.on .topBtn{position: absolute;top: 15px;right:150px;width: 20px;height: 2
     border-right-color: transparent !important;
     border-bottom-color: transparent !important;
     transform: rotate(45deg);cursor: pointer;opacity: .7;transition: 0.3s;}
+header.on .topBtn img{display: none;
+        -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+}
+
 header.on .topBtn:hover{opacity: 1;}
 header.on .gnb.rotate .h_inner ul{
 }
@@ -2407,6 +2415,17 @@ footer{ overflow: hidden;position: relative;z-index: 1;}
             /* .bng_btn{top:107px;} */
             header .gnb{height: 116px;} 
             .bng_btn{top:80px;}
+            header.on .topBtn{
+                border: 0;
+                width: 30px;
+                height: 30px;
+                padding: 0;
+                text-align: center;
+                top: 3px;
+                right: 140px;
+            }
+            
+            header.on .topBtn img{display: block;}
             header .gnb .h_inner ul{margin-top:116px;}
             .rotate_n h1{width: 65px;;}
             .rotate_n h2{width: 91px;;}
