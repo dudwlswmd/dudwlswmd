@@ -221,7 +221,7 @@ tabMenua.forEach(function (e, index) {
       event.preventDefault(); // 상단 이동 기본 동작 막기
 
       tabMenua.forEach(function(a) {
-        a.style.color = defaultColor; // 모든 탭 메뉴 항목의 글자색을 기본색상으로 설정
+       // a.style.color = defaultColor; // 모든 탭 메뉴 항목의 글자색을 기본색상으로 설정
         a.classList.remove('clicked'); // 모든 탭 메뉴 항목에서 clicked 클래스 제거
         a.style.opacity = 0.5; // 모든 탭 메뉴 항목의 불투명도 값을 0.5로 설정
       });
@@ -327,6 +327,9 @@ window.addEventListener('scroll',function(){
       gnb.style.backgroundColor = clickedColor; // gnb 배경색 변경
       gnb.classList.remove('active'); // gnb에 활성화 클래스 제거
       document.querySelector('#logoc').src = 'img/logo-1und1_s.svg'; // 탭이 닫힐 때 이미지 변경
+
+      bngBtn.classList.remove('on')//버튼 엑스를 햄버거로 바꿔준다.
+      tabMenuOn.classList.remove('on')//스크롤내렸을때 메뉴없애준다.
 
       for (let i = 0; i < tabMenua.length; i++) {
         tabMenua[i].classList.remove('active'); // 탭 내용에서 활성화 클래스 제거
