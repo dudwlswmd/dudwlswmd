@@ -52,9 +52,71 @@ subTabMenu.forEach(function (e, index) {
 
 
 
+const topBtn = document.querySelector('.topBtn');
+console.log(topBtn)
+//top 탑버튼
+topBtn.addEventListener('click',()=>{
+     window.scrollTo({
+     top:0, behavior:"smooth" });
+})
+
+
+
+window.addEventListener('scroll',function(){
+     // pos.status = pos.oy < pos.y; 
+          if(this.window.scrollY > 500){  
+               topBtn.classList.add('on')
+
+          }else{
+          if(this.window.scrollY < 500 ){
+               topBtn.classList.remove('on')
+               }
+          }
+});
 
 
 
 
 
-
+//셰프의팁 간편식 업데이트 슬라이드
+var upgradeSwiper = new Swiper(".upgradeSwiper", {
+     loop: true, // 무한반복 여부
+     // loopAdditionalSlides : 1,
+     slidesPerView: 3,
+     slidesPerGroup: 1,
+     centeredSlides: true,
+     spaceBetween: 120,
+     // pagination: {
+     //     el: ".swiper-pagination",
+     //     type: "fraction",
+     // },
+     navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+     },
+         // 화면의 넓이가 1500px 이상일 때
+          breakpoints: {
+               // 화면의 넓이가 1500px 이상일 때
+               1500: {
+               slidesPerView: 3,
+               spaceBetween: 120
+               },
+               830: {
+               slidesPerView: 3,
+               spaceBetween: 100
+               },
+               800: {
+               slidesPerView: 1,
+               spaceBetween: 0
+               },    
+               700: {
+               slidesPerView: 1,
+               spaceBetween: 0
+               },
+               500: {
+               slidesPerView: 1,
+               spaceBetween: 0
+               },
+          }
+     
+});
