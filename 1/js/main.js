@@ -113,7 +113,7 @@ var upgradeSwiper = new Swiper(".upgradeSwiper", {
                slidesPerView: 1,
                spaceBetween: 0
                },
-               500: {
+               100: {
                slidesPerView: 1,
                spaceBetween: 0
                },

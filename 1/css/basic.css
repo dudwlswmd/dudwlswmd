@@ -1051,31 +1051,47 @@ footer .bottom{}
 
 
 @media screen and (max-width:550px) {
+     .inner, .h_top{padding: 0 10px;}
      .visual .swiper-slide a .txt {
           top: -40%;
           left: -20%;
-      }
+     }
      .slider .slide_tit > li span{font-size:12px;}
      .tabCon1, .tabCon2 {
           height: 400px;
-      }
-      .left_recipe ul li a dl dd, .right_recipe ul li a dl dd{font-size:20px;}
-      .tabCon1 li:nth-child(3) {
+     }
+     .left_recipe ul li a dl dd, .right_recipe ul li a dl dd{font-size:20px;}
+     .tabCon1 li:nth-child(3) {
           background-position: 50% -120px !important;
-      }
-      .tabCon1 li:nth-child(4) {
+     }
+     .tabCon1 li:nth-child(4) {
           background-position: 0% -80px !important;
-      }
-      .section4 h3{font-size: 35px;;}
-      .section4 .p{font-size:18px;}
-      .swiper-button-next:after {
+     }
+     .section4 h3{font-size: 35px;;}
+     .section4 .p{font-size:18px;}
+     .swiper-button-next:after {
           margin-left: -40px !important;
-      }
-      .swiper-button-next:after, .swiper-button-prev:after {
+     }
+     .swiper-button-next:after, .swiper-button-prev:after {
           left: -60px;
-      }
+     }
 }
+@media screen and (max-width:500px) {
+     .visual .swiper-slide a .txt {
+          top: -35%;
+          left: -36%;
+          width: 150%;
+     }
+     .kiz .swiper-android .swiper-slide, .swiper-wrapper {padding-bottom: 40px;}
+     .nav_gnb_r li:first-child{margin-right:0;}
+     .btn.btn-red.mainbtn{display: none;}
+     .slider .slide_tit > li{padding: 0 2px;}
 
+     .tabCon1 li {
+          background-size: cover !important;
+          background-position: 50% -30px !important;
+     }
+}
 
 
 
