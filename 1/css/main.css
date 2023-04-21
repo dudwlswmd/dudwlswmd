@@ -123,16 +123,16 @@ transform: translateX(-50%) !important;
      margin: 20px 0 10px;
 }
 .section1 .section1_left p{padding:15px 0;}
-.section1 .section1_left ul{width:65%;}
+.section1 .section1_left ul{width:75%;}
 .section1 .section1_left ul li{
      display:inline-flex;
      margin: 2px 2px;
 }
 .section1 .section1_left ul li a{
-     font-size: 20px;
+     font-size: 14px;
      line-height: 25px;
      color: #777777;
-     padding: 5px 20px 7px;
+     padding: 5px 10px;
      border: 1px solid #c1c1c1;
      background: #fff;
      border-radius: 50px;
@@ -661,7 +661,7 @@ width: 5px;
      
      .tabCon2 > li div dt{font-size:1.5em}
      .tabCon2 > li div dt {margin-top: 80px;}
-
+     .section1 .section1_left ul{width: 95%;}
      .kiz_slide .kizSwiper .swiper-wrapper .swiper-slide .txt h4{margin-top: 10px;}
      .section1 .section1_right .content3 {
           background: url(../img/img2.jpg) no-repeat center;}
