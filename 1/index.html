@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <link rel="icon" href="img/logo-bvb.svg" type="image/x-icon"> 
+    <!-- <link rel="icon" href="img/logo-bvb.svg" type="image/x-icon">  -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
     <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script src="js/swiper.min.js"></script> -->
 
     <!-- <script src="js/swiper.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
-    <title>프로젝트 사이트</title>
+    <title>푸디박스</title>
 </head>
 <body class="scroll_bar">
     <header>
         <div class="h_top">
             <div class="inner">
-                <h1><img src="img/logo_f.png" alt="">메인로고</h1>
+                <h1><img src="logo/foodiebox.svg" alt="">메인로고</h1>
                 <div class="gnb_sch_form">
                     <form name="h_form" id="h_form" action="">
                         <input type="text" name="s_value" id="s_value" value="" maxlength="30" 
@@ -195,72 +196,89 @@
                 <span class="btn btn_prev">&lt;</span>
                 <span class="num"></span>
                 <span class="btn btn_next">&gt;</span>
+                <button class="stopBtn">멈춤</button>
             </div>
         </div>
         <script>
-            // 문서가 로드되면 실행
-            document.addEventListener('DOMContentLoaded', function() {
-              // 슬라이더 함수 실행
-              slider();
-            });
-            
-            // 슬라이더 함수 정의
-            function slider() {
-              // 슬라이드 타이틀을 담을 배열 생성
-              let titArray = [];
-              // 모든 슬라이드 타이틀(li)에 대해 반복문 실행
-              let slideTit = document.querySelectorAll('.visual_slider .slide_tit > li');
-              for (let i = 0; i < slideTit.length; i++) {
-                // 타이틀의 텍스트를 가져와서 titArray 배열에 추가
-                let txt = slideTit[i].textContent;
-                titArray.push(txt);
-              }
-              
-              // 슬라이드 전체 페이지 번호를 나타내는 요소
-              let num = document.querySelector('.visual_slider .num');
-              // 슬라이드 전체 개수
-              let slides = document.querySelectorAll('.visual_slider .swiper-slide');
-              let slideCount = slides.length;
-              // 슬라이드 전체 페이지 번호 초기화
-              num.innerHTML = '1 / ' + slideCount;
-            
-              // 슬라이드 시작
-              let visual_slider = new Swiper('.visual_slider', {
-                loop: true, // 무한반복 여부
-                slidesPerView: 1, // 슬라이드 당 보여질 슬라이드 수
-                autoplay: { // 자동 재생 옵션
-                  delay: 10000, // 자동 재생 지연 시간
-                  disableOnInteraction: false // 사용자의 동작에 따라 자동 재생 일시 중지 여부
-                },
-                effect: 'fade', // 슬라이드 전환 효과
-                fadeEffect: { // 페이드 인/아웃 효과 설정
-                  crossFade: true // 교차 페이드 인/아웃 여부
-                },
-                navigation: { // 이전/다음 버튼 옵션
-                  nextEl: '.slider .btn_next', // 다음 버튼 요소
-                  prevEl: '.slider .btn_prev', // 이전 버튼 요소
-                },
-                // 페이지네이션 옵션
-                pagination: {
-                  el: '.slider .slide_tit', // 페이지네이션 요소
-                  clickable: true, // 페이지네이션 요소 클릭 여부
-                  type: 'bullets', // 페이지네이션 타입 (원형 모양)
-                  renderBullet: function (index, className) {
-                    // 원형 모양 페이지네이션 타이틀과 페이지 번호를 설정하는 함수
-                    return '<li class="' + className + '"><span class="bar"></span><span class="txt">' + titArray[index] + '</span></li>';
-                  },
-                },
-                // 슬라이드 변경 시 현재 페이지 번호 갱신
-                on: {
-                  slideChange: function () {
-                    // num.innerHTML = '<span>' + (swiper.realIndex + 1) + '</span> / ' + slideCount;
-                    num.innerHTML = `<span>${visual_slider.realIndex + 1} / ${slideCount}</span>`  ;
-                  }
+                // 문서가 로드되면 실행
+                document.addEventListener('DOMContentLoaded', function() {
+                // 슬라이더 함수 실행
+                slider();
+                });
+                
+                // 슬라이더 함수 정의
+                function slider() {
+                // 슬라이드 타이틀을 담을 배열 생성
+                let titArray = [];
+                // 모든 슬라이드 타이틀(li)에 대해 반복문 실행
+                let slideTit = document.querySelectorAll('.visual_slider .slide_tit > li');
+                for (let i = 0; i < slideTit.length; i++) {
+                    // 타이틀의 텍스트를 가져와서 titArray 배열에 추가
+                    let txt = slideTit[i].textContent;
+                    titArray.push(txt);
                 }
-              });
-            
-            
-            }
+                
+                // 슬라이드 전체 페이지 번호를 나타내는 요소
+                let num = document.querySelector('.visual_slider .num');
+                // 슬라이드 전체 개수
+                let slides = document.querySelectorAll('.visual_slider .swiper-slide');
+                let slideCount = slides.length;
+                // 슬라이드 전체 페이지 번호 초기화
+                num.innerHTML = '1 / ' + slideCount;
+                
+                // 슬라이드 시작
+                let visual_slider = new Swiper('.visual_slider', {
+                    loop: true, // 무한반복 여부
+                    slidesPerView: 1, // 슬라이드 당 보여질 슬라이드 수
+                    autoplay: { // 자동 재생 옵션
+                    delay: 5000, // 자동 재생 지연 시간
+                    disableOnInteraction: false // 사용자의 동작에 따라 자동 재생 일시 중지 여부
+                    },
+                    effect: 'fade', // 슬라이드 전환 효과
+                    fadeEffect: { // 페이드 인/아웃 효과 설정
+                    crossFade: true // 교차 페이드 인/아웃 여부
+                    },
+                    navigation: { // 이전/다음 버튼 옵션
+                    nextEl: '.slider .btn_next', // 다음 버튼 요소
+                    prevEl: '.slider .btn_prev', // 이전 버튼 요소
+                    },
+                    // 페이지네이션 옵션
+                    pagination: {
+                    el: '.slider .slide_tit', // 페이지네이션 요소
+                    clickable: true, // 페이지네이션 요소 클릭 여부
+                    type: 'bullets', // 페이지네이션 타입 (원형 모양)
+                    renderBullet: function (index, className) {
+                        // 원형 모양 페이지네이션 타이틀과 페이지 번호를 설정하는 함수
+                        return '<li class="' + className + '"><span class="bar"></span><span class="txt">' + titArray[index] + '</span></li>';
+                    },
+                    },
+                    // 슬라이드 변경 시 현재 페이지 번호 갱신
+                    on: {
+                    slideChange: function () {
+                        // num.innerHTML = '<span>' + (swiper.realIndex + 1) + '</span> / ' + slideCount;
+                        num.innerHTML = `<span>${visual_slider.realIndex + 1} / ${slideCount}</span>`  ;
+                    }
+                    }
+                });
+                
+                const stopBtn = document.querySelector('.stopBtn')
+                const bar = document.querySelector('.swiper-pagination-bullet-active span')
+                console.log(bar);
+                stopBtn.addEventListener('click',function(){
+                    stopBtn.classList.toggle('stop');
+                    if(stopBtn.classList.contains('stop')){
+                        visual_slider.autoplay.stop()
+                        bar.classList.remove('bar')
+                    } else {
+                        visual_slider.autoplay.start()
+                        bar.classList.add('bar')
+
+                    }
+                })
+
+
+                
+                }
             
             
             </script>
@@ -324,21 +342,6 @@
                                 <div class="swiper-pagination kiz"></div>
                             </div><!--mySwiper : END-->
                         </div><!--bu : END-->
-                        <script>
-                            var swiper = new Swiper(".kizSwiper", {
-                                loop: true, // 무한반복 여부
-                                pagination: {
-                                    el: ".swiper-pagination",
-                                    type: "fraction",
-                                },
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                                });
-                        </script>
-
-
 
                     </div><!--content1 : END-->
                     <div class="content2">
