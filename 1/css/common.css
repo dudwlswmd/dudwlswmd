@@ -46,10 +46,8 @@ section{display: inline-block !important;width: 100%;;}
 /*-------------------헤더 부분 시작------------------------*/
 header{position: relative;width:100%;height: auto;}
 .h_top{position: relative;width: 100%;height: 105px;box-sizing: border-box;z-index: 13;background: linear-gradient(to right, #bf132b, #f64646);}
-header h1{font-size:0;overflow: hidden;float: left;line-height:100px;width: 240px;height: 105px;;}
-h1 img  {  width: 90%;
-position: relative;
-top: -58%;}
+header h1{font-size:0;overflow: hidden;float: left;width: 240px;height: 100%;}
+h1 img  {  width: 100%;padding-top: 8px;}
 .gnb_sch_form{float: left;position: relative;padding-left:8%;line-height:105px;}
 .gnb_sch_form input{
      background: transparent;

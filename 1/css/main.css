@@ -63,12 +63,15 @@
      margin-left: 20px;
 }
 
+.stopBtn{background: url('../img/stop.png')no-repeat;background-size: 100%;font-size: 0;width: 20px;height: 20px;position: relative;left: 8px;}
+.stopBtn.stop{background: url('../img/play.png')no-repeat;background-size: 100%;}
+
 /* 슬라이드 타이틀 */
 .slider .slide_tit {display: flex;position: absolute;bottom: 0;left: 50%;width:100%;z-index: 100;}
 .slider .slide_tit > li {display: flex;flex:1 1 0;justify-content: center;align-items: center;position: relative;width: auto;height: 40px;margin: 0!important;margin: 0;padding: 0 10px;background: rgba(0,0,0,0.3);border-radius:0;font-size: 16px;letter-spacing:-0.025em;color: rgb(255, 255, 255);opacity: 1;}
 .slider .slide_tit > li.swiper-pagination-bullet-active {background: #f64646;color: #fff;}
 .slider .slide_tit > li .bar {position: absolute;top: 0;left: 0;width:0;height: 2px;background: #fff;}
-.slider .slide_tit > li.swiper-pagination-bullet-active .bar {animation-name: countingBar;animation-duration: 10s;animation-timing-function: linear;animation-fill-mode:forwards;}
+.slider .slide_tit > li.swiper-pagination-bullet-active .bar {animation-name: countingBar;animation-duration: 5s;animation-timing-function: linear;animation-fill-mode:forwards;}
 .slider .slide_tit > li.swiper-pagination-bullet-active .bar.on {animation-fill-mode: inherit;animation-name: countingBar2;animation-duration:inherit;}
 
 .slide_tit.slide_dot{bottom:0 !important;
@@ -90,6 +93,7 @@ transform: translateX(-50%) !important;
 .slider .control {display: flex;justify-content: center;align-items: center; position: absolute;bottom: 100px;left:50%; width: 120px; height: 30px;margin-left: 470px; background-color: rgb(0, 0, 0, 0.3);border-radius:15px;z-index: 100;}
 .slider .control .btn {display: flex;align-items: center;font-size: 16px;font-weight: 400;letter-spacing:-0.025em;color: #fff;cursor: pointer;}
 .slider .control .num {margin: 0 7px;font-size: 16px;font-weight: 300;letter-spacing:-0.025em;color: #fff;}
+.slider .control .num span{position: relative;top:-2px;}
 
 
 
@@ -820,7 +824,7 @@ width: 5px;
           width: 105px;padding: 0;
      }
      .subTabMenu li a{font-size:16px;}
-     .slider .slide_tit > li span{font-size:14px;}
+     .slider .slide_tit > li strong{font-size:14px;}
      .section1 .section1_right .content1{float: none;    padding: 20px 0 40px;}
      .section1 .section1_right{display: inherit;}
      .kiz_slide img {
@@ -862,7 +866,7 @@ width: 5px;
           top: -40%;
           left: -20%;
      }
-     .slider .slide_tit > li span{font-size:12px;}
+     .slider .slide_tit > li strong{font-size:12px;}
      .tabCon1, .tabCon2 {
           height: 400px;
      }

@@ -75,7 +75,19 @@ window.addEventListener('scroll',function(){
 });
 
 
+//밀키트 스와이퍼
 
+var swiper = new Swiper(".kizSwiper", {
+     loop: true, // 무한반복 여부
+     pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+     },
+     navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+     },
+});
 
 
 //셰프의팁 간편식 업데이트 슬라이드
@@ -120,3 +132,5 @@ var upgradeSwiper = new Swiper(".upgradeSwiper", {
           }
      
 });
+
+
