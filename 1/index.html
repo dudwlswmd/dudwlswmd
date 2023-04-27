@@ -4,793 +4,1864 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <!-- <link rel="icon" href="img/logo-bvb.svg" type="image/x-icon">  -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/logo-bvb.svg" type="image/x-icon"> 
+    <link rel="stylesheet" href="css/basic.css">
+    <!-- <link rel="stylesheet" href="css/numberlist.css"> -->
     <link rel="stylesheet" href="css/reset.css">
-    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- <script src="js/swiper.min.js"></script> -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
+    <script defer type="module" src="js/players_list.js" type="text/javascript"></script>
 
-    <!-- <script src="js/swiper.min.js"></script> -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
-    <title>푸디박스</title>
-</head>
-<body class="scroll_bar">
-    <header>
-        <div class="h_top">
-            <div class="inner">
-                <h1><img src="logo/foodiebox.svg" alt="">메인로고</h1>
-                <div class="gnb_sch_form">
-                    <form name="h_form" id="h_form" action="">
-                        <input type="text" name="s_value" id="s_value" value="" maxlength="30" 
-                        placeholder="제품, 요리명 등 다양하게 검색해보세요!(예: 밀키트)" 
-                        title="검색어를 입력해주세요.">
-                        <label for="">
-                            <a href="" class="btn_sch"><img src="img/top_sch.png" alt="검색"></a>
-                        </label>
-                    </form>
-                </div><!--gnb_sch_form : END-->
-                <ul>
-                    <li><a href="">라면맛집</a></li>
-                    <li><a href="">XO만두</a></li>
-                </ul>
-            </div><!--inner : END-->
-        </div><!--h_top : END-->
-        <nav>
-            <div class="inner">
-                <ul class="gnb">
-                    <li class="gnb_menu">
-                        <p class="bar"><span></span></p>
-                        <a>카테고리</a>
-                        <div class="gnb_sub">
-                            <ul class="subTabMenu">
-                                <li><a href="">배달</a></li>
-                                <li><a href="">픽업/홀</a></li>
-                                <li><a href="">밀키트</a></li>
-                                <li><a href="">마트</a></li>
-                                <li><a href="">선물하기</a></li>
-                            </ul><!--subTabMenu : END-->
-                            <div class="conWra">
-                                <ul class="subTabMenuCon on">
-                                    <li><a href="">1인분</a></li>
-                                    <li><a href="">치킨</a></li>
-                                    <li><a href="">피자</a></li>
-                                    <li><a href="">한식</a></li>
-                                    <li><a href="">중식/아시안</a></li>
-                                    <li><a href="">일식/돈까스/회</a></li>
-                                    <li><a href="">양식</a></li>
-                                    <li><a href="">족발/보쌈</a></li>
-                                    <li><a href="">고기/구이</a></li>
-                                    <li><a href="">분식</a></li>
-                                    <li><a href="">페스트푸드</a></li>
-                                    <li><a href="">카페.디저트</a></li>
-                                </ul><!--subTabMenuCon : END-->
-                                <ul class="subTabMenuCon">
-                                    <li><a href="">미리 주문하고 포장하기</a></li>
-                                    <li><a href="">미리 주문하고 홀에서 식사</a></li>
-                                </ul><!--subTabMenuCon : END-->
-                                <ul class="subTabMenuCon">
-                                    <li><a href="">#전국맛집지도</a></li>
-                                    <li><a href="">밀키트 기획전</a></li>
-                                    <li><a href="">간편/메인요리</a></li>
-                                    <li><a href="">데일리 반찬</a></li>
-                                    <li><a href="">밥/도시락/면</a></li>
-                                    <li><a href="">국/탕/찌개</a></li>
-                                    <li><a href="">구이/볶음/찜</a></li>
-                                    <li><a href="">안주/야식</a></li>
-                                    <li><a href="">간식/음료</a></li>
-                                    <li><a href="">식단/건강관리</a></li>
-                                </ul><!--subTabMenuCon : END-->
-                                <ul class="subTabMenuCon">
-                                    <li><a href="">이달의 신상템</a></li>
-                                    <li><a href="">베스트셀러</a></li>
-                                    <li><a href="">타임세일</a></li>
-                                    <li><a href="">맛있는 것 - </a></li>
-                                    <li><a href="">편리한 것 - </a></li>
-                                    <li><a href="">기획전</a></li>
-                                </ul><!--subTabMenuCon : END-->
-                                <ul class="subTabMenuCon">
-                                    <li><a href="">선물하기 바로가기</a></li>
-                                </ul><!--subTabMenuCon : END-->
-                            </div><!--conWra : END-->
-                        </div><!--gnb_sub : END-->
-                    </li>
-                    <li><a href="">이벤트 / 쿠폰</a></li>
-                    <li><a href="">인기 레시피</a></li>
-                    <li><a href="">신규점포</a></li>
-                </ul><!--gnb : END-->
-                <ul class="nav_gnb_r">
-                    <li><a href="">기업형몰</a></li>
-                    <li><a href="">최근 본 레시피</a></li>
-                </ul><!--nav_gnb_r : END-->
-            </div><!--inner : END-->
-        </nav>
-    </header>
-    <div class="visual">
-
-        <div class="slider visual_slider">
-            <!-- 슬라이드 -->
-            <ul class="list swiper-wrapper">
-                <li class="swiper-slide ">
-                    <a href="">
-                        <img src="img/deliver_slide.jpg" class="web" alt="">
-                        <img src="img/mobile/deliver_mobile.jpg" class="mobile" alt="">
-                        <div class="txt">
-                            <h2><strong>푸디박스 전국배송</strong>GRAND OPEN</h3>
-                            <h3>전국 + 지정일 배송<br>
-                                <strong>서비스를 만나보세요</strong></h1>
-                            <!-- <div class="tag"><span>#생일축하해</span><span>#핫케이크</span></div> -->
-                            <button class="btn btn-red mainbtn mt30">푸디박스 전국배송 바로가기<i></i></button>
-                        </div>
-                    </a>
-                </li>
-                <li class="swiper-slide ">
-                    <a href="">
-                        <img src="img/coupon_slide.jpg" class="web" alt="">
-                        <img src="img/mobile/coupon_mobile.jpg" class="mobile" alt="">
-                        <div class="txt">
-                            <h2><strong>5월 얼리버드</strong> 쿠폰</h3>
-                            <h3>오늘 구매하면<br>
-                                <strong>할인쿠폰을 드려요!</strong></h1>
-                            <!-- <div class="tag"><span>#채식</span><span>#카레토마토솥밥</span></div> -->
-                            <button class="btn btn-red mainbtn mt30">할인쿠폰 바로가기<i></i></button>
-                        </div>
-                    </a>
-                </li>
-                <li class="swiper-slide ">
-                    <a href="">
-                        <img src="img/camp_slide.jpg" class="web" alt="">
-                        <img src="img/mobile/card_mobile.jpg" class="mobile" alt="">
-                        <div class="txt">
-                            <h2><strong>4월의</strong>카드 혜택!</h3>
-                            <h3>신한/삼성/록데<br>
-                                <strong>결제일 할인 혜택</strong></h1>
-                            <!-- <div class="tag"><span>#얼큰한</span><span>#열라면</span><span>#순두부열라면</span></div> -->
-                            <button class="btn btn-red mainbtn mt30">카드 할인 혜택 보기<i></i></button>
-                        </div>
-                    </a>
-                </li>
-                <li class="swiper-slide ">
-                    <a href="">
-                        <img src="img/gift_slide.jpg" class="web" alt="">
-                        <img src="img/mobile/gift_mobile.jpg" class="mobile" alt="">
-                        <div class="txt">
-                            <h2><strong>따뜻한 집밥을</strong>선물하세요!</h3>
-                            <h3>선물하기 이용시<br>
-                                <strong>중복 +3%할인</strong></h1>
-                            <!-- <div class="tag"><span>#XO만두</span><span>#떡만둣국</span><span>#뜨끈한국물</span></div> -->
-                            <button class="btn btn-red mainbtn mt30">선물하기 바로가기<i></i></button>
-                        </div>
-                    </a>
-                </li>
-                <li class="swiper-slide ">
-                    <a href="">
-                        <img src="img/slide_.jpg" class="web" alt="">
-                        <img src="img/mobile/app_push_mobile.jpg" class="mobile" alt="">
-                        <div class="txt">
-                            <h2><strong>APP-PUSH</strong>알림 동의 이벤트</h3>
-                            <h3>APP PUSH 동의하고<br>
-                                <strong>혜택 받으세요!</strong></h1>
-                            <!-- <div class="tag"><span>#허브</span><span>#스파이스</span></div> -->
-                            <button class="btn btn-red mainbtn mt30">자세한 이용 방법 보기<i></i></button>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            
-            <!-- 슬라이드 타이틀 (pagination) -->
-            <ul class="slide_tit slide_dot">
-                <li>푸디박스 배송</li>
-                <li>얼리버드 쿠폰</li>
-                <li>4월의 카드 혜택</li>
-                <li>집밥 선물해요</li>
-                <li>알림 이벤트</li>
-            </ul>
-        
-            <!-- 버튼, 페이지 번호 -->
-            <div class="control">
-                <span class="btn btn_prev">&lt;</span>
-                <span class="num"></span>
-                <span class="btn btn_next">&gt;</span>
-                <button class="stopBtn">멈춤</button>
-            </div>
-        </div>
-        <script>
-                // 문서가 로드되면 실행
-                document.addEventListener('DOMContentLoaded', function() {
-                // 슬라이더 함수 실행
-                slider();
-                });
-                
-                // 슬라이더 함수 정의
-                function slider() {
-                // 슬라이드 타이틀을 담을 배열 생성
-                let titArray = [];
-                // 모든 슬라이드 타이틀(li)에 대해 반복문 실행
-                let slideTit = document.querySelectorAll('.visual_slider .slide_tit > li');
-                for (let i = 0; i < slideTit.length; i++) {
-                    // 타이틀의 텍스트를 가져와서 titArray 배열에 추가
-                    let txt = slideTit[i].textContent;
-                    titArray.push(txt);
-                }
-                
-                // 슬라이드 전체 페이지 번호를 나타내는 요소
-                let num = document.querySelector('.visual_slider .num');
-                // 슬라이드 전체 개수
-                let slides = document.querySelectorAll('.visual_slider .swiper-slide');
-                let slideCount = slides.length;
-                // 슬라이드 전체 페이지 번호 초기화
-                num.innerHTML = '1 / ' + slideCount;
-                
-                // 슬라이드 시작
-                let visual_slider = new Swiper('.visual_slider', {
-                    loop: true, // 무한반복 여부
-                    slidesPerView: 1, // 슬라이드 당 보여질 슬라이드 수
-                    autoplay: { // 자동 재생 옵션
-                    delay: 5000, // 자동 재생 지연 시간
-                    disableOnInteraction: false // 사용자의 동작에 따라 자동 재생 일시 중지 여부
-                    },
-                    effect: 'fade', // 슬라이드 전환 효과
-                    fadeEffect: { // 페이드 인/아웃 효과 설정
-                    crossFade: true // 교차 페이드 인/아웃 여부
-                    },
-                    navigation: { // 이전/다음 버튼 옵션
-                    nextEl: '.slider .btn_next', // 다음 버튼 요소
-                    prevEl: '.slider .btn_prev', // 이전 버튼 요소
-                    },
-                    // 페이지네이션 옵션
-                    pagination: {
-                    el: '.slider .slide_tit', // 페이지네이션 요소
-                    clickable: true, // 페이지네이션 요소 클릭 여부
-                    type: 'bullets', // 페이지네이션 타입 (원형 모양)
-                    renderBullet: function (index, className) {
-                        // 원형 모양 페이지네이션 타이틀과 페이지 번호를 설정하는 함수
-                        return '<li class="' + className + '"><span class="bar"></span><span class="txt">' + titArray[index] + '</span></li>';
-                    },
-                    },
-                    // 슬라이드 변경 시 현재 페이지 번호 갱신
-                    on: {
-                    slideChange: function () {
-                        // num.innerHTML = '<span>' + (swiper.realIndex + 1) + '</span> / ' + slideCount;
-                        num.innerHTML = `<span>${visual_slider.realIndex + 1} / ${slideCount}</span>`  ;
-                    }
-                    }
-                });
-                
-                const stopBtn = document.querySelector('.stopBtn')
-                const bar = document.querySelector('.swiper-pagination-bullet-active span')
-                console.log(bar);
-                stopBtn.addEventListener('click',function(){
-                    stopBtn.classList.toggle('stop');
-                    if(stopBtn.classList.contains('stop')){
-                        visual_slider.autoplay.stop()
-                        bar.classList.remove('bar')
-                    } else {
-                        visual_slider.autoplay.start()
-                        bar.classList.add('bar')
-
-                    }
-                })
-
-
-                
-                }
-            
-            
-            </script>
-
-    </div><!--visual : END-->
     
-    <main>
-        <section class="section1">
+    <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <title>도르트문트CF</title>
+</head>
+<body>
+    <header>
 
-            <div class="inner">
-                <div class="section1_left">
-                    <h2>
-                        이건 어때요?<br />인기 검색어
-                    </h2>
-                    <p>고민을 덜어주는 추천 검색어</p>
-                    <ul>
-                        <li><a href="">#K점심메뉴</a></li>
-                        <li><a href="">#디저트템</a></li>
-                        <li><a href="">#원플레이트</a></li>
-                        <li><a href="">#4천원이하</a></li>
-                        <li><a href="">#우리집의 심야식당</a></li>
-                        <li><a href="">#최저가 할인템</a></li>
-                        <li><a href="">#자취러꿀템</a></li>
-                        <li><a href="">#초간편 렌지요리</a></li>
-                        <li><a href="">#이달의 신상</a></li>
-                        <li><a href="">#속세의 맛 시단템</a></li>
-                    </ul>
-                </div><!--section1_left : END-->
-                <div class="section1_right">
-                    <div class="content1">
-                        <h3>Kid's Cooking<span>인기 추천 밀키트</span></h3>
-                        <div class="kiz_slide">
-                            <div class="swiper kizSwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/kiz01.png" alt="">
-                                        <div class="txt">
-                                            <h4>옥수수푸딩</h4>
-                                            <p>#옥수수푸딩 #콘스프</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/kiz02.png" alt="">
-                                        <div class="txt">
-                                            <h4>옥수수푸딩</h4>
-                                            <p>#옥수수푸딩 #콘스프</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/kiz03.png" alt="">
-                                        <div class="txt">
-                                            <h4>옥수수푸딩</h4>
-                                            <p>#옥수수푸딩 #콘스프</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="next_prev">
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                                <div class="swiper-pagination kiz"></div>
-                            </div><!--mySwiper : END-->
-                        </div><!--bu : END-->
-
-                    </div><!--content1 : END-->
-                    <div class="content2">
-                        <h3>History<span>최근 본 레시피</span></h3>
-                        <p>최근에 본 레시피를<br /> 다시 찾아 볼 수 있습니다.</p>
-                        <img src="img/img01.jpg" alt="">
-                        <dl>
-                            <dt>#토마토 #솥밥 #카레</dt>
-                            <dd>카레 토마토솥밥</dd>
-                        </dl>
-                        <div class="plus"><a href="">더보기</a></div>
-                    </div><!--content1 : END-->
-                    <div class="content3">
-                        <a href="">
-                            <h3>푸디박스의 <br />쉽고 간단한 <br />계량 꿀팁!</h3>
-                            <p>밥숟가락,종이컵으로 간단하고 쉽게 알려드립니다.</p>
-                        </a>
-                    </div><!--content1 : END-->
-                </div><!--section1_right : END-->
-            </div><!--inner : END-->
-        </section><!--section1 : END-->
-        <section class="section2">
-            <div>
-                <p class="center_img">
-                    <img src="img/tabcenter01.png" class="on" alt="">
-                    <img src="img/tabcenter02.png" alt="">
-                    <img src="img/tabcenter03.png" alt="">
-                    <img src="img/tabcenter04.png" alt="">
-                </p><!--center_img : END-->
-                <div class="tabMenu">
-                    <h3>SELECTO MENU</h3>
-                    <ul>
-                        <li class="active"><button>SIGNATURE</button></li>
-                        <li><button>BEVERAGE</button></li>
-                        <li><button>COFFEE</button></li>
-                        <li><button>COOKIE</button></li>
-                    </ul>
-                </div><!--tabMenu : END-->
-                <ul class="tabCon1">
-                    <li class="on"><div class="con"></div></li>
-                    <li><div class="con"></div></li>
-                    <li><div class="con"></div></li>
-                    <li><div class="con"></div></li>
+        <div class="header_top">
+            <div class="cuver">
+                <ul>
+                    <li class="on"><a href=""><i class="fa-solid fa-futbol"><span>BVB.hom</span></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"><span>BVB-TV by 1&1</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-shirt"title="팬샵"><span>FanShop</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-ticket"title="티켓샵"><span>TicketShop</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-chart-line"title="선수데이터"><span>Aktie</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-trophy"><span>Borusseum</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-child-reaching" title="어린이"><span>KisClub</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-plane-departure" title="여행"><span>Reisen</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-handshake" title="회원"><span>Vip Menmber</span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-heart" title="하트"><span>donation</span></i></a></li>
                 </ul>
-                <ul class="tabCon2">
-                    <li class="on">
-                        <div class="con">
-                            <h3>COFFEE</h3>
-                            <p>셀렉토는 품질 좋은 원두를 선별해, 최적의 로스팅 포인트로<br />
-                            더욱 섬세하게 균형잡힌 풍미의 커피를 고객에게 선사합니다.</p>
-                            <ul>
-                                <li><img src="img/coffee01.png" alt=""></li>
-                                <li><img src="img/coffee02.png" alt=""></li>
-                                <li><img src="img/coffee03.png" alt=""></li>
-                            </ul>
-                            <dl>
-                                <dt>추천 토핑류</dt>
-                                <dd>
-                                    <img src="img/s_coffee01.png" alt="">
-                                    <span>시럽_바닐라빈</span>
-                                </dd>
-                                <dd>
-                                    <img src="img/s_coffee02.png" alt="">
-                                    <span>시럽_카라멜</span>
-                                </dd>
-                                <dd>
-                                    <img src="img/s_coffee03.png" alt="">
-                                    <span>우유_오트밀</span>
-                                </dd>
-                                <dd>
-                                    <img src="img/s_coffee04.png" alt="">
-                                    <span>크림_흑임자</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="con">
-                            <h3>BEVERAGE</h3>
-                            <p>고객의 라이프 스타일에 맞춰 더욱 다양하게 즐길<br />
-                                수 있는 셀렉토의 음료 라인업!</p>
-                            <ul>
-                                <li><img src="img/coffee01.png" alt=""></li>
-                                <li><img src="img/coffee02.png" alt=""></li>
-                                <li><img src="img/coffee03.png" alt=""></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="con">
-                            <h3>SIGNATURE</h3>
-                            <p>셀렉토 감성과 재미를 듬뿍 담아 낸, 셀렉토에서
-                                맛볼 수 있는 시그니처 음료</p>
-                            <ul>
-                                <li><img src="img/coffee01.png" alt=""></li>
-                                <li><img src="img/coffee02.png" alt=""></li>
-                                <li><img src="img/coffee03.png" alt=""></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="con">
-                            <h3>COFFEE</h3>
-                            <p>셀렉토는 품질 좋은 원두를 선별해, 최적의 로스팅 포인트로<br />
-                            더욱 섬세하게 균형잡힌 풍미의 커피를 고객에게 선사합니다.</p>
-                            <ul>
-                                <li><img src="img/coffee01.png" alt=""></li>
-                                <li><img src="img/coffee02.png" alt=""></li>
-                                <li><img src="img/coffee03.png" alt=""></li>
-                            </ul>
-                            <dl>
-                                <dt>추천 토핑류</dt>
-                                <dd>
-                                    <img src="img/s_coffee01.png" alt="">
-                                    <span>시럽_바닐라빈</span>
-                                </dd>
-                                <dd>
-                                    <img src="img/s_coffee02.png" alt="">
-                                    <span>시럽_카라멜</span>
-                                </dd>
-                                <dd>
-                                    <img src="img/s_coffee03.png" alt="">
-                                    <span>우유_오트밀</span>
-                                </dd>
-                                <dd>
-                                    <img src="img/s_coffee04.png" alt="">
-                                    <span>크림_흑임자</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
-                </ul>
-            </div><!--tabMenu : END-->
-            <script>
-                const tabMenuList = document.querySelectorAll('.tabMenu ul li');
-                const tabCon1List = document.querySelectorAll('.tabCon1 > li');
-                const tabCon2List = document.querySelectorAll('.tabCon2 > li');
-                const centerImgBu = document.querySelector('.center_img ');
-                const centerImg = document.querySelectorAll('.center_img img');
-
-                num = 0;
-
-                tabMenuList.forEach(function(e,index){
-                    e.addEventListener('click',function(){
-                        this.classList.add('active');
-                        this.classList.add('active')
-                        //tabCon1List[num2].classList.add('on2')
-                        centerImg[num].classList.remove('on')
-
-                        tabMenuList[num].classList.remove('active')
-                        tabCon1List[num].classList.remove('on')
-                        tabCon2List[num].classList.remove('on')
-                        tabCon1List.forEach(function(element){
-                            element.classList.remove('on2')
-                        })
-                        tabCon1List[num].classList.add('on2')
-                        tabCon1List[index].classList.add('on')
-                        tabCon2List[index].classList.add('on')
-
-                        // centerImg.src = `img/tabcenter0${index+1}.png`;
-
-                        console.log('num 변경전값',num)
-                        num = index;
-                        centerImg[num].classList.add('on')
-
-                        console.log('num 변경후값',num)
-
-                    });
-                });
-
-                let previousTab = null;
-
-                tabMenuList.forEach(function(e, index) {
-                e.addEventListener('click', function() {
-                        this.classList.add('active');
-                        if (previousTab !== null) {
-                        previousTab.classList.remove('z-index1');
-                        }
-                        this.classList.add('z-index1');
-                        tabCon1List[num].classList.remove('on');
-                        tabCon1List[index].classList.add('on');
-                        previousTab = this;
-                        num = index;
-                    });
-                });
-            </script>
-            <div class="marqueeBox">
-                <div class="marquee">
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-
-                </div>
-                <div class="marquee marquee2">
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                    <span><img src="img/se.log" alt="">매장에서 직접 구워 맛있는 코딩쿠키</span>
-                </div>
-            </div><!--marqueeBox : END-->
-        </section><!--section2 : END-->
-
-        <section class="section3">
-            <div class="inner">
-                <h3>추천 레시피</h3>
-                <p class="p">도르트문트가 제안하는 레시피로 최고의 순간을 만들어 보세요.</p>
-                <div class="left_recipe">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <p><img src="img/recipe01.jpg" alt=""></p>
-                                <dl>
-                                    <dt>#요리초보 #요린이 #봄</dt>
-                                    <dd>봄 된장 비빔밥</dd>
-                                </dl>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <p><img src="img/recipe02.jpg" alt=""></p>
-                                <dl>
-                                    <dt>#갈릭아이올리 #계란요리 #브런치</dt>
-                                    <dd>에그마요 샌드위치</dd>
-                                </dl>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <p><img src="img/recipe03.jpg" alt=""></p>
-                                <dl>
-                                    <dt>#열라면 #투움바 #프레스코</dt>
-                                    <dd>열라면 투움바</dd>
-                                </dl>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--left_recipe : END-->
-                <div class="right_recipe">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <p><img src="img/recipe04.jpg" alt=""></p>
-                                <dl>
-                                    <dt>#열라면 #돈까스 #돈까스김치나베</dt>
-                                    <dd>돈까스 김치나베 </dd>
-                                </dl>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <p><img src="img/recipe05.jpg" alt=""></p>
-                                <dl>
-                                    <dt>#딸기 #케이크 #핫케이크믹스</dt>
-                                    <dd>에그마요 샌드위치</dd>
-                                </dl>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <p><img src="img/recipe06.jpg" alt=""></p>
-                                <dl>
-                                    <dt>#볶음밥X라조장 #계란요리 #치즈듬뿍</dt>
-                                    <dd>한라산 볶음밥</dd>
-                                </dl>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--right_recipe : END-->
-            </div><!--inner : END-->
-        </section><!--section3 : END-->
-
-        <section class="section4">
-            <h3>셰프의 팁 간편식 업그레이드</h3>
-            <p class="p">우리가 제안하는 간편식이 근사한 요리가 되는 팁을 공개합니다.</p>
-            <div class="upgrade_slide">
-                <div class="swiper upgradeSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/upimg01.jpg" alt="">
-                            <div class="txt">
-                                <span>#냉동피자X초콜릿</span>
-                                <span>#바나나</span>
-                                <span>#단짠단짠</span>
-                                <a href=""><h4>초콜릿피자</h4></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/upimg02.jpg" alt="">
-                            <div class="txt">
-                                <span>#XO만두</span>
-                                <span>#굴림만두</span>
-                                <span>#캠핑</span>
-                                <a href=""><h4>완자꼬치</h4></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/upimg03.jpg" alt="">
-                            <div class="txt">
-                                <span>#볶음밥X라조장</span>
-                                <span>#계란요리</span>
-                                <span>#치즈듬뿍</span>
-                                <a href=""><h4>한라산볶음밥</h4></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/recipe04.jpg" alt="">
-                            <div class="txt">
-                                <span>#열라면</span>
-                                <span>#돈까스</span>
-                                <span>#돈까스 김치나베</span>
-                                <a href=""><h4>돈까스 김치나베</h4></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/recipe05.jpg" alt="">
-                            <div class="txt">
-                                <span>#딸기</span>
-                                <span>#케이크</span>
-                                <span>#핫케이크믹스</span>
-                                <a href=""><h4>딸기케이크</h4></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="next_prev">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <!-- <div class="swiper-pagination kiz"></div> -->
-                </div><!--mySwiper : END-->
-            </div><!--upgrade_slide : END-->
-            <div class="upgrade_btn">
-                <button>더보기</button>
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-magnifying-glass" title="돋보기"><span></span></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook-f" title="페이스북"><span></span></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter" title="트위터"><span></span></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram" title="인스타"><span></span></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitch"><span></span></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-globe" title="글로벌"><span></span></i></a></li>
+                    <li><a href="">Login</a></li>
+                </ul>   
             </div>
-            
-        </section><!--section4 : END-->
+            <button>up/down </button>
+        </div><!--header_top : END-->
 
-        <section class="section5">
+        <div class="gnb rotate">
+            <div class="rotate_n">
+                <h1><a href="#"><img src="img/logo-bvb.svg" alt=""></a></h1>
+                <h2><a href="#"><img src="img/logo-1und1_s.svg" alt=""  id="logoc"></a></h2>
+            </div>
+            <div class="h_inner">
+                <button class="bng_btn"><span>메뉴버튼</span></button>
+                <ul class="tabMenu">
+                    <li>
+                        <a href="#">NEWS</a>
+                        <ul  class="subMenu">
+                            <li><a href="">개요</a></li>
+                            <li><a href="#">인터뷰</a></li>
+                            <li><a href="#">배경</a></li>
+                            <li><a href="#">이야기</a></li>
+                            <li><a href="#">U23</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">재단,기부금</a></li>
+                            <li><a href="#">뉴스 레터</a></li>
+                        </ul><!--subMenu : END-->
+                    </li>
+                    <li><a href="http://www.naver.com">BVB-TV</a></li>
+                    <li><a href="http://www.naver.com">SHOP</a></li>
+                    <li>
+                        <a href="#">TICKETS</a>
+                        <ul  class="subMenu">
+                            <li><a href="#">티켓 구매</a></li>
+                            <li><a href="#">티켓 정보</a></li>
+                            <li><a href="#">뉴스레터</a></li>
+                            <li><a href="#">경기 계획</a></li>
+                            <li><a href="#">뉴스 레터</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">스타이움 투어</a></li>
+                            <li><a href="#">사전 판매 날짜</a></li>
+                        </ul><!--subMenu : END-->
+                    </li>
+                    <li>
+                        <a href="#">SPIELE</a>
+                        <ul class="subMenu">
+                            <li><a href="#">경기</a></li>
+                            <li><a href="#">동영상</a></li>
+                            <li><a href="#">경기 날짜</a></li>
+                            <li><a href="#">BVB 라디오</a></li>
+                            <li><a href="#">모든 경기들</a></li>
+                        </ul><!--subMenu : END-->
+                    </li>
+                    <li>
+                        <a href="#">MANNSCHAFTEN</a>
+                        <ul class="subMenu">
+                            <li><a href="#">선수단</a></li>
+                            <li><a href="#">유소년</a></li>
+                            <li><a href="#">전통</a></li>
+                        </ul><!--subMenu : END-->
+                    </li>
+                    <li>
+                        <a href="#">FANS</a>
+                        <ul class="subMenu">
+                            <li><a href="#">경기</a></li>
+                            <li><a href="#">팬클럽</a></li>
+                            <li><a href="#">팬 조언</a></li>
+                            <li><a href="#">팬 부서</a></li>
+                            <li><a href="#">BVB 소식</a></li>
+                            <li><a href="#">BVB 팬 월드</a></li>
+                        </ul><!--subMenu : END-->
+                    </li>
+                    <li>
+                        <a href="#">DER BVB</a>
+                        <ul class="subMenu">
+                            <li><a href="#">역사 소개</a></li>
+                            <li><a href="#">홈 구장 소개</a></li>
+                            <li><a href="#">자원 봉사자</a></li>
+                            <li><a href="#">재단, 기부금</a></li>
+                            <li><a href="#">일자리</a></li>
+                            <li><a href="#">E 풋볼</a></li>
+                        </ul><!--subMenu : END-->
+                    </li>
+                    <li>
+                        <a href="#">PARTNER / HOSPITALITY</a>
+                        <ul class="subMenu">
+                            <li><a href="#">비즈니스 뉴스</a></li>
+                            <li><a href="#">파트너들</a></li>
+                            <li><a href="#">파트너 네트워크</a></li>
+                        </ul><!--subMenu : END-->
+                    </li> 
+                    <!--<li><a href="#">뉴스</a></li>
+                    <li><a href="">도르트문트 TV</a></li>
+                    <li><a href="#">쇼핑</a></li>
+                    <li><a href="#">티켓</a></li>
+                    <li><a href="#">경기 일정</a></li>
+                    <li><a href="#">드림 팀</a></li>
+                    <li><a href="#">팬페이지</a></li>
+                    <li><a href="#">도르트문트 역사</a></li>
+                    <li><a href="#">파트너 기업</a></li>-->
+                </ul>
+            </div><!--h_inner : END-->
+            <button class="topBtn"><img src="img/topBtn.png" alt=""></button>
+        </div><!--gnb : END-->
+
+        <ul class="gnb_content tabBody">
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">개요</a></li>
+                                <li><a href="#">인터뷰</a></li>
+                                <li><a href="#">배경</a></li>
+                                <li><a href="#">이야기</a></li>
+                                <li><a href="#">U23</a></li>
+                                <li><a href="#">재단,기부금</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">뉴스 레터</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav2">
+                            <h3>소식</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="news_btn">
+                                            모든 뉴스 보기
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="nav3">
+                            <h3>경기 스토리</h3>
+                            <div>
+                                <dl>
+                                    <dt>다음 게임</dt>
+                                    <dd>
+                                        <span><img src="img/ranking6.png" alt=""></span>
+                                        <p><strong> - : - </strong></p>
+                                        <span><img src="img/logo-bvb.svg" alt=""></span>
+                                    </dd>
+                                    <dd>프랑크 푸르트 &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; 도르트 문트</dd>
+                                    <dd><img src="img/ass_logo_eca.png" alt=""></dd>
+                                    <dd><span>2023.05.27 18:30</span></dd>
+                                </dl>
+                                <dl>
+                                    <dt>마지막 게임</dt>
+                                    <dd>
+                                        <span><img src="img/muin.png" alt=""></span>
+                                        <p><strong>2 : 3</strong></p>
+                                        <span><img src="img/logo-bvb.svg" alt=""></span>
+                                    </dd>
+                                    <dd>바이에른 뮌헨 &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; 도르트 문트</dd>
+                                    <dd><img src="img/bl_17_footer.jpg" alt=""></dd>
+                                    <dd>26일 매치데이<span>2023.05.27 18:30</span></dd>
+                                </dl>
+                                <!-- <a href="">모든 게임 표시</a> -->
+                            </div>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>BVB TV</h3>
+                            <img src="img/navImg01.jpg" alt="">
+                            <dl>
+                                <dt>지금 BVB TV 구독 박아!!</dt>
+                                <dd>
+                                    월 1.99유로에 원하는 클럽뿐만 아니라 모든 BVB 분데스리가, 유러피언 컵, DFB 컵 경기에 대한 최신 독점 비디오를 주문형으로 받을 수 있습니다.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                BVB TV 바로가기
+                            </a>
+                        </nav>
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+            <li>
+                <div>
+                    <ul>
+                        <li class="backBtn"><a href="#">뒤로</a></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    내용3
+                    <ul>
+                        <li class="backBtn"><a href="#">뒤로</a></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">티켓 구매</a></li>
+                                <li><a href="#">사전 판매 날짜</a></li>
+                                <li><a href="#">티켓 정보</a></li>
+                                <li><a href="#">스타이움 투어</a></li>
+                                <li><a href="#">뉴스레터</a></li>
+                                <li><a href="#">경기 계획</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">뉴스 레터</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>티켓 구매 방법</h3>
+                            <img src="img/navImg02.jpg" alt="">
+                            <dl>
+                                <dt>여기 티켓이 있습니다!!</dt>
+                                <dd>
+                                    BVB를 가까이에서 경험하고 팀을 응원하세요.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                매표소로
+                            </a>
+                        </nav><!--nav4 : END-->
+                        <nav class="nav4">
+                            <h3>티켓 뉴스</h3>
+                            <img src="img/navImg03.jpg" alt="">
+                            <dl>
+                                <dt>지금 BVB TV 구독 박아!!</dt>
+                                <dd>
+                                    목요일부터 보훔 경기 티켓 구매 가능
+                                </dd>
+                            </dl>
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav><!--nav4 : END-->
+                        <nav class="nav2">
+                            <h3>소식</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="news_btn">
+                                            모든 뉴스 보기
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+    
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">경기</a></li>
+                                <li><a href="#">BVB 라디오</a></li>
+                                <li><a href="#">동영상</a></li>
+                                <li><a href="#">경기 날짜</a></li>
+                                <li><a href="#">모든 경기들</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav2">
+                            <h3>이벤트</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            잔디 공 스포츠 라이프치히 - 보루시아 도르트문트
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            VfB 슈투트가르트-보루시아 도르트문트
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="news_btn">
+                                            더 많은 이벤트 보기
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="nav3">
+                            <h3>경기 스토리</h3>
+                            <div>
+                                <dl>
+                                    <dt>다음 게임</dt>
+                                    <dd>
+                                        <span><img src="img/ranking6.png" alt=""></span>
+                                        <p><strong> - : - </strong></p>
+                                        <span><img src="img/logo-bvb.svg" alt=""></span>
+                                    </dd>
+                                    <dd>프랑크 푸르트 &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; 도르트 문트</dd>
+                                    <dd><img src="img/ass_logo_eca.png" alt=""></dd>
+                                    <dd><span>2023.05.27 18:30</span></dd>
+                                </dl>
+                                <dl>
+                                    <dt>마지막 게임</dt>
+                                    <dd>
+                                        <span><img src="img/muin.png" alt=""></span>
+                                        <p><strong>2 : 3</strong></p>
+                                        <span><img src="img/logo-bvb.svg" alt=""></span>
+                                    </dd>
+                                    <dd>바이에른 뮌헨 &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; 도르트 문트</dd>
+                                    <dd><img src="img/bl_17_footer.jpg" alt=""></dd>
+                                    <dd>26일 매치데이<span>2023.05.27 18:30</span></dd>
+                                </dl>
+                                <!-- <a href="">모든 게임 표시</a> -->
+                            </div>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>혜택</h3>
+                            <img src="img/navImg04.jpg" alt="">
+                            <dl>
+                                <dt>팬 혜택: WOW + BVB-TV 12개월</dt>
+                                <dd>
+                                    WOW를 통해 BVB가 분데스리가와 DFB 컵은 물론 최고의 핸드볼, 테니스, 골프, 포뮬러 1 경기를 라이브로 볼 수 있습니다. 
+                                    또한 독점 비디오 및 보고서가 포함된 BVB 아카이브에 액세스할 수 있습니다. 
+                                    한 달에 €24.99에 함께 사용하세요.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                BVB TV 바로가기
+                            </a>
+                        </nav>
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">선수단</a></li>
+                                <li><a href="#">유소년</a></li>
+                                <li><a href="#">전통</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav5">
+                            <h3>골키퍼</h3>
+                            <ul>
+                                <li><a href="#"><p>1</p><span>그레고리 코벨</span></a></li>
+                                <li><a href="#"><p>33</p><span>알렉산더 마이어</span></a></li>
+                                <li><a href="#"><p>35</p><span>마르셀 로트카</span></a></li>
+                                <li><a href="#"><p>38</p><span>루카 운베혼</span></a></li>
+                            </ul>
+                        </nav><!--nav5 : END-->
+                        <nav class="nav5">
+                            <h3>수비수</h3>
+                            <ul>
+                                <li><a href="#"><p>2</p><span>마테우 모리 바우자</span></a></li>
+                                <li><a href="#"><p>4</p><span>니코 슐로터벡</span></a></li>
+                                <li><a href="#"><p>13</p><span>라파엘 게레이로</span></a></li>
+                                <li><a href="#"><p>14</p><span>니코 슐즈</span></a></li>
+                                <li><a href="#"><p>15</p><span>마츠 후엘스</span></a></li>
+                                <li><a href="#"><p>24</p><span>토마스 뮐너</span></a></li>
+                                <li><a href="#"><p>25</p><span>니클라스 술레</span></a></li>
+                                <li><a href="#"><p>26</p><span>줄리안라이어슨</span></a></li>
+                            </ul>
+                        </nav><!--nav5 : END-->
+                        <nav class="nav5">
+                            <h3>미드필더</h3>
+                            <ul>
+                                <li><a href="#"><p>6</p><span>살리 오즈칸</span></a></li>
+                                <li><a href="#"><p>7</p><span>조반니 레이나</span></a></li>
+                                <li><a href="#"><p>8</p><span>마흐무드 다후드</span></a></li>
+                                <li><a href="#"><p>11</p><span>마르코레우스</span></a></li>
+                                <li><a href="#"><p>17</p><span>마리우스 울프</span></a></li>
+                                <li><a href="#"><p>19</p><span>줄리안 브란트</span></a></li>
+                                <li><a href="#"><p>22</p><span>주드 벨링엄</span></a></li>
+                                <li><a href="#"><p>23</p><span>멀레 칸</span></a></li>
+                                <li><a href="#"><p>30</p><span>펠릭스 패스</span></a></li>
+                                <li><a href="#"><p>32</p><span>압둘라예 카마라</span></a></li>
+                                <li><a href="#"><p>42</p><span>곡탄 구르푸즈</span></a></li>
+                            </ul>
+                        </nav><!--nav5 : END-->
+                        <nav class="nav5">
+                            <h3>공격수</h3>
+                            <ul>
+                                <li><a href="#"><p>9</p><span>세바스티안 힐러</span></a></li>
+                                <li><a href="#"><p>16</p><span>줄리앙 듀랑빌</span></a></li>
+                                <li><a href="#"><p>18</p><span> 유수파 무코코</span></a></li>
+                                <li><a href="#"><p>20</p><span>앤서니 모데스트</span></a></li>
+                                <li><a href="#"><p>20</p><span>앤서니 모데스트</span></a></li>
+                                <li><a href="#"><p>21</p><span>도넬 페인트</span></a></li>
+                                <li><a href="#"><p>27</p><span>카림 아데예미</span></a></li>
+                                <li><a href="#"><p>43</p><span>제이미 바이노 기른스</span></a></li>
+                            </ul>
+                        </nav><!--nav5 : END-->
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+    
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">경기</a></li>
+                                <li><a href="#">BVB 소식</a></li>
+                                <li><a href="#">팬클럽</a></li>
+                                <li><a href="#">팬 조언</a></li>
+                                <li><a href="#">팬 부서</a></li>
+                                <li><a href="#">BVB 팬 월드</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav2">
+                            <h3>이벤트</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            잔디 공 스포츠 라이프치히 - 보루시아 도르트문트
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            VfB 슈투트가르트-보루시아 도르트문트
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>04.15</p>
+                                        <span>
+                                            게레이로가 전화를 끊고, 말렌이 맞고, 변신할 수 있습니다.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="news_btn">
+                                            더 많은 이벤트 보기
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>베팅 모든것</h3>
+                            <img src="img/navImg04.jpg" alt="">
+                            <dl>
+                                <dt>Nobby에 대한 모든 것 - 검정색과 노란색 베팅 그룹</dt>
+                                <dd>
+                                    검은색 및 노란색 베팅 그룹에서 Nobby는 모든 Borussia 플레이어에게 베팅에 도전합니다! 
+                                    참여는 물론 무료이며 최고의 팁을 주는 사람은 매 경기일과 시즌이 끝날 때 독점적인 BVB 상을 받습니다. 
+                                    페이스북 친구를 초대하여 경쟁할 수도 있습니다.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                베팅 바로가기
+                            </a>
+                        </nav>
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">역사 소개</a></li>
+                                <li><a href="#">홈 구장 소개</a></li>
+                                <li><a href="#">자원 봉사자</a></li>
+                                <li><a href="#">재단, 기부금</a></li>
+                                <li><a href="#">일자리</a></li>
+                                <li><a href="#">E 풋볼</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>노동조합</h3>
+                            <img src="img/bvb_gnb_01.jpg" alt="">
+                            <dl>
+                                <dt>보르지그플라츠 출생</dt>
+                                <dd>
+                                    BV의 가장 중요한 기관. 
+                                    보루시아 09 eV 도르트문트와 그 멤버들.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                협회 위원회
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>노동 위원회</h3>
+                            <img src="img/bvb_gnb_02.jpg" alt="">
+                            <dl>
+                                <dt>KGAA</dt>
+                                <dd>
+                                    Borussia Dortmund GmbH & Co. KGaA, 위원회 및 구성원에 대한 개요입니다.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>일자리</h3>
+                            <img src="img/bvb_gnb_03.jpg" alt="">
+                            <dl>
+                                <dt>일자리</dt>
+                                <dd>
+                                    보루시아 도르트문트는 단순한 고용주 그 이상입니다. 
+                                    무엇보다 보루시아 도르트문트는 삶의 방식이기도 하다. 
+                                    이것은 우리의 기업 및 클럽 문화에 반영됩니다. 
+                                    보루시아 도르트문트에서 일하는 사람들은 BVB 가족과 떼려야 뗄 수 없는 감정적 연결을 느낍니다. 
+                                </dd>
+                            </dl>
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>재단, 기부금</h3>
+                            <img src="img/bvb_gnb_04.jpg" alt="">
+                            <dl>
+                                <dt>라이트 업 - BVB 재단</dt>
+                                <dd>
+                                    분데스리가 50회 시즌 12일, 보루시아 도르트문트가 비영리재단 '라이트업'의 창립을 맞아 별의 탄생을 자축했다.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <h3>우리의 게임</h3>
+                            <img src="img/bvb_gnb_05.jpg" alt="">
+                            <dl>
+                                <dt>BVB의 지속 가능한 개발</dt>
+                                <dd>
+                                    연대와 공동체로 보루시아 도르트문트의 지속 가능한 보고서를 우리는 항상 개발한다.
+                                </dd>
+                            </dl>
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+            <li>
+                <div class="skew_n">
+                    <div class="inner">
+                        <nav class="nav1">
+                            <ul>
+                                <li class="backBtn"><a href="#">뒤로</a></li>
+                                <li><a href="#">비즈니스 뉴스</a></li>
+                                <li><a href="#">파트너들</a></li>
+                                <li><a href="#">파트너 네트워크</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav4">
+                            <img src="img/fatner_bng01.png" alt="">
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <img src="img/fatner_bng02.png" alt="">
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <img src="img/fatner_bng03.png" alt="">
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <img src="img/fatner_bng04.png" alt="">
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                        <nav class="nav4">
+                            <img src="img/fatner_bng06.png" alt="">
+                            <a href="">
+                                더 알아보기
+                            </a>
+                        </nav>
+                    </div><!--inner : END-->
+                </div><!--skew_n : END-->
+            </li>
+        </ul>
+
+    </header>
+
+
+    <div class="wr">
+
+
+        <div class="swiper-container visual skew ">
+            <!-- <div class="swiper-scrollbar"></div> -->
+
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide on">
+                    <div class="img">
+                        <dl class="visual_txt">
+                            <dt>도르트문트 CF</dt>
+                            <dd> 도르트문트는 12연승을 거두며<br /> 
+                                리그 역사를 만들었습니다.
+                            </dd>
+                            <dd>
+                                2023년04년17일
+                            </dd>
+                        </dl><!--visual_txt : END-->
+                    </div>
+                </div><!---슬라이더 컨텐--->
+                <div class="swiper-slide ">
+                    <div class="img">
+                        <dl class="visual_txt">
+                            <dt>도르트문트 CF</dt>
+                            <dd> 도르트문트는 12연승을 거두며<br /> 
+                                리그 역사를 만들었습니다.
+                            </dd>
+                            <dd>
+                                2023년04년17일
+                            </dd>
+                        </dl><!--visual_txt : END-->
+                    </div>
+                </div><!---슬라이더 컨텐--->
+                <div class="swiper-slide ">
+                    <div class="img">
+                        <dl class="visual_txt">
+                            <dt>도르트문트 CF</dt>
+                            <dd> 도르트문트는 12연승을 거두며<br /> 
+                                리그 역사를 만들었습니다.
+                            </dd>
+                            <dd>
+                                2023년04년17일
+                            </dd>
+                        </dl><!--visual_txt : END-->
+                    </div>
+                </div><!---슬라이더 컨텐--->
+                <div class="swiper-slide ">
+                    <div class="img">
+                        <dl class="visual_txt">
+                            <dt>도르트문트 CF</dt>
+                            <dd> 도르트문트는 12연승을 거두며<br /> 
+                                리그 역사를 만들었습니다.
+                            </dd>
+                            <dd>
+                                2023년04년17일
+                            </dd>
+                        </dl><!--visual_txt : END-->
+                    </div>
+                </div><!---슬라이더 컨텐--->
+
+            </div><!--swiper-wrapper : END-->
+            <ul class="swiper-pagination ul skew_n"></div>
+            <!-- <ul class="swiper-pagination ">
+                <li class="on"><img src="img/baner02.jpg" alt=""><span>도르트문트 CF</span></li>
+                <li><img src="img/wu02.webp" alt=""><span>BVB 팬샵</span></li>
+                <li><img src="img/wu02.webp" alt=""><span>새로운 컬렉션</span></li>
+                <li><img src="img/wu02.webp" alt=""><span>BVB 파트너스</span></li>
+            </ul> -->
+            <!-- <ul class="ul skew_n">
+                <li class="on"><img src="img/baner02.jpg" alt=""><span>도르트문트 CF</span></li>
+                <li><img src="img/wu02.webp" alt=""><span>BVB 팬샵</span></li>
+                <li><img src="img/wu02.webp" alt=""><span>새로운 컬렉션</span></li>
+                <li><img src="img/wu02.webp" alt=""><span>BVB 파트너스</span></li>
+            </ul> -->
+        </div>
+        <div class="nextBtn visualBtn">
+            <div class="swiper-button-prev2"><</div>
+            <div class="swiper-button-next2">></div>
+        </div><!--nextBtn : END-->
+    </div><!--wr : END-->
+
+
+
+
+    <main>
+        <section class="content1 skew">
+            <ul>
+                <li>
+                    <div class="game_con1">
+                        <h3>이전 경기 결과</h3>
+                        <div class="score">
+                            <div>
+                                <p><img src="img/muin.png" alt=""></p>
+                            </div>
+                            <div>2 : 2</div>
+                            <div>
+                                <p><img src="img/logo-bvb.svg" alt=""></p>
+                            </div>
+                        </div><!--score : END -->
+                        <dl>
+                            <dt>샬케04 VS<strong> 도르트문트</strong></dt>
+                            <dd>분데스리가<br />2023년 03월 11일 18:30 경기</dd>
+                        </dl>
+                    </div><!--game_con : END-->
+                </li>
+                <li>
+                    <div class="game_con2">
+                        <h3>돌아오는 경기</h3>
+                        <div class="score">
+                            <div>
+                                <img src="img/logo-bvb.svg" alt="">
+                                <span>도르트문트</span>
+                            </div>
+                            <div><span><strong> - </strong>&nbsp;VS&nbsp;<strong> - </strong></span></div>
+                            <div>
+                                <img src="img/koln.png" alt="">
+                                <span>1.FC KOLN</span>
+                            </div>
+                        </div><!--score : END-->
+                        <ul class="game_con2_list">
+                            <li>SIGNAL IDUNA </li>
+                            <li>2023.04.27 18:30</li>
+                            <li>BUNDESLIGA</li>
+                            <li><a href="#">TICKETS</a></li>
+                        </ul>
+                    </div><!--game_con : END-->
+                </li>
+                <li>
+                    <div class="game_con3">
+                        <h3>이후의 경기들</h3>
+                        <dl>
+                            <dt>바이에른 바이에른 - 보루시아 도르트문트</dt>
+                            <dd>2023. 05. 24 / 18:30</dd>
+                        </dl>
+                        <dl>
+                            <dt>스포츠 라이프치히 - 보루시아 도르트문트</dt>
+                            <dd>2023. 06. 04 / 20:45</dd>
+                        </dl>
+                        <dl>
+                            <dt>유니온 베를린 - 보루시아 도르트문트</dt>
+                            <dd>2023. 08. 23 / 15:30</dd>
+                        </dl>
+                    </div><!--game_con : END-->
+                </li>
+            </ul>
+        </section><!--content1 : END-->
+        <section class="content2 skew">
             <div class="inner">
-                <h3>인기 음식들</h3>
-                <p class="p">오'키친에서 많은 분들이 찾아본 인기 레시피를 소개합니다.</p>
+                <h2>분대스리가 뉴스</h2>
+                <ul class="new_ul1">
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span>2023. 03. 18</span>
+                                <img src="img/new01.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="img">
+                                        <span>2023. 04. 24</span>
+                                        <img src="img/new02.jpg" alt="">
+                                    </div>
+                                    <dl>
+                                        <dt>
+                                            함께하는 홀리데이 매거진</dt>
+                                        <dd>
+                                            보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                            킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                            신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는
+                                        </dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="img">
+                                        <span>2023. 05. 07</span>
+                                        <img src="img/new03.jpg" alt="">
+                                    </div>
+                                    <dl>
+                                        <dt>시버트 휘파람 | 하늘 방송</dt>
+                                        <dd>
+                                            보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                            킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                            신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는
+                                        </dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span>파트너스 광고</span>
+                                <img src="img/b_baner2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span>2023. 03. 18</span>
+                                <img src="img/new04.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span>2023. 03. 18</span>
+                                <img src="img/new05.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span>2023. 03. 18</span>
+                                <img src="img/new06.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span>2023. 03. 18</span>
+                                <img src="img/new07.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>
+                                    U19는 이제 타이틀 해트트릭을 목표로 합니다.</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <div class="r_baner">
+                    <a href="#">
+                        <img src="img/r_baner.jpg" alt="">
+                        <span>파트너 광고</span>
+                    </a>
+                </div><!--r_baner : END-->
+                <div class="news_plus">
+                    <a href="#">
+                        뉴스 개요 더보기
+                    </a>
+                </div>
+            </div><!--inner : END-->
+        </section><!--content2 : END-->
+        <section class="content3 skew">
+            <div class="inner skew_n">
+                <h2>도르트문트 선수단</h2>
+                <div class="swiper-container players ">
+                    <!-- <div class="swiper-scrollbar"></div> -->
+
+                    <ul class="swiper-wrapper  list_bu">
+                        <li class="swiper-slide on">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h01.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>1</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li><!---슬라이더 컨텐--->
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h02.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>2</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h03.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>3</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h04.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>4</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h05.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>5</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h06.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>6</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h07.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>7</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h08.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>8</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h09.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>9</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h10.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>10</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h11.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>11</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide ">
+                            <div>
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/h12.png" alt="">
+                                        <p class="p1"><span></span></p>
+                                        <p class="p2"></p>
+                                        <p class="p3"></p>
+                                        <p class="p4"></p>
+                                    </div><!--img : END-->
+                                    <dl>
+                                        <dt><span>12</span><span>주드벨링엄</span></dt>
+                                        <dd></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+                <div class="nextBtn">
+                    <div class="swiper-button-prev players"><</div>
+                    <div class="swiper-button-next players">></div>
+                    <div class="Clas"><a href="#">선수단 정보</a></div>
+                </div><!--nextBtn : END-->
+
+            
+            </div><!--inner : END-->
+        </section><!--content3 : END-->
+
+        <section class="content4 skew">
+            <div class="inner skew_n">
+                <img src="img/Shopzeile_Merchandising.png" alt="">
+                <dl>
+                    <dt>
+                        도르트문트는 '다르다!' 시작부터<br />
+                        22/23 새 시즌 유니폼 론칭!
+                    </dt>
+                    <dd>
+                        <a href="#">구단 팬샵</a>
+                    </dd>
+                </dl>
+            </div><!--inner : END-->
+        </section><!--content4 : END-->
+        <section  class="content5 skew">
+            <div class="inner ">
+                <h2 class="skew_n">프로모션</h2>
                 <ul>
                     <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList01.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#덮밥요리 #푸디박스햄 #골드마요네스</span>
-                                <h4>햄마요덮밥</h4>
-                            </div><!--txt : END-->
+                        <a href="#" class="skew_n">
+                            <img src="img/kg04.jpg" alt="" />
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList02.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#파스타샐러드 #키즈셰프 #토마토퓨레</span>
-                                <h4>토마토 냉파스타</h4>
-                            </div><!--txt : END-->
+                        <a href="#" class="skew_n">
+                            <img src="img/kg05.jpg" alt="" />
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList03.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#치즈듬뿍 #단짠단짠 #골드마요네스</span>
-                                <h4>콘치즈</h4>
-                            </div><!--txt : END-->
+                        <a href="#" class="skew_n">
+                            <img src="img/kg03.jpg" alt="" />
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList04.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#3일숙성카레 #카레맛집 #쇠고기</span>
-                                <h4>카레 비프 스튜</h4>
-                            </div><!--txt : END-->
+                        <a href="#" class="skew_n">
+                            <img src="img/kg02.jpg" alt="" />
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList05.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#셰프의팁 #즉석국 #캠핑</span>
-                                <h4>차돌박이 된장찌개</h4>
-                            </div><!--txt : END-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList06.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#셰프의팁 #즉석국 #집밥</span>
-                                <h4>육개장 칼국수</h4>
-                            </div><!--txt : END-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList07.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#집밥 #밑반찬 #꿀유자차</span>
-                                <h4>유자 연근조림</h4>
-                            </div><!--txt : END-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="img"><img src="img/foodList08.jpg" alt=""><div class="icon"><span>추천</span><span>인기</span></div></div>
-                            <div class="txt">
-                                <span>#갈릭아이올리 #계란요리 #브런치</span>
-                                <h4>에그마요 샌드위치</h4>
-                            </div><!--txt : END-->
+                        <a href="#" class="skew_n">
+                            <img src="img/kg01.jpg" alt="" />
                         </a>
                     </li>
                 </ul>
             </div><!--inner : END-->
-        </section><!--section5 : END-->
+        </section><!--content5 : END-->
 
-        <section class="section6">
-            <div class="txt">
-				<h3><span class="red">향신료의 매력에 푹 빠지고 싶다면?</span><br>
-					허브·스파이스 전문 도서관<br>
-					<span class="f43">라이브러리 H</span>
-				</h3>
-				<button class="btn btn-white" >자세한 이용 방법 보기</button>
-			</div>
-        </section><!--section6 : END-->
+
+        <section class="content4 content6 skew">
+            <div class="inner skew_n">
+                <img src="img/Stadiontour.png" alt="">
+                <dl>
+                    <dt>
+                        시그널 이두나 파크 <br />
+                        스타디움 투어 예약하기
+                    </dt>
+                    <dd>
+                        <a href="#">투어 예약</a>
+                    </dd>
+                </dl>
+            </div><!--inner : END-->
+        </section><!--content6 : END-->
+
+        <section class="content7 skew">
+            <ul>
+                <li >
+                    <a href="#" class="skew_n">
+                        <div class="bg_b">
+                            <img src="img/video01.jpg" alt="">
+                            <img class="icon" src="img/bvb_total_play.png" alt="">
+                            <p>
+                                <span>2023.03.29</span>
+                                BV-u23:<br />
+                                강등권 싸움 &<br />
+                                프로 진출과의 싸움
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="skew_n">
+                        <div class="bg_b">
+                            <img src="img/video02.jpg" alt="">
+                            <img class="icon" src="img/bvb_total_play.png" alt="">
+                            <p>
+                                <span>2023.03.29</span>
+                                BV-u23:<br />
+                                강등권 싸움 &<br />
+                                프로 진출과의 싸움
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="skew_n">
+                        <div class="bg_b">
+                            <img src="img/video03.jpg" alt="">
+                            <img class="icon" src="img/bvb_total_play.png" alt="">
+                            <p>
+                                <span>2023.03.29</span>
+                                BV-u23:<br />
+                                강등권 싸움 &<br />
+                                프로 진출과의 싸움
+                            </p>
+                        </div><!--bg_b : END-->
+                    </a>
+                </li>
+            </ul>
+        </section><!--content7 : END-->
+
+
+
+
+
+
+        <section class="content8 skew">
+            <div class="inner">
+                <h2>도르트문트 SNS</h2>
+                <ul class="new_ul1">
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/sns09.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/sns02.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>
+                                    함께하는 홀리데이 매거진</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/sns03.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/new04.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/new05.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/new06.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 | 하늘 방송</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/new07.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>
+                                    U19는 이제 타이틀 해트트릭을 목표로 합니다.</dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                    신제품이 나오자마자 보루시아 도르트문트와 도르트문트 및 해당 지역의 일반적인 관심 서비스는 보루시아 도르트문트는 토요일
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 </dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <span><i class="fa-brands fa-twitter" title="트위터"></i></span>
+                                <img src="img/new08.jpg" alt="">
+                            </div>
+                            <dl>
+                                <dt>시버트 휘파람 </dt>
+                                <dd>
+                                    보루시아 도르트문트는 토요일 SIGNAL IDUNA PARK에서 1. FC Köln과 경기를 치릅니다. 
+                                    킥오프는 오후 6시 30분이다. 분데스리가 홈 경기에 대한 모든 정보를 간결한 형태로 요약했습니다. 
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div><!--inner : END-->
+        </section><!--content2 : END-->
+
+
+        <section class="content9 skew">
+            <div class="inner">
+
+                <h2>분대스리가 순위</h2>
+
+            
+
+
+
+            <div class="cuver">
+                <div class="swiper-container ranking_list">
+                    <!-- <div class="swiper-scrollbar"></div> -->
+
+                    <div class="swiper-wrapper list_bu">
+                        <div class="swiper-slide on">
+                            <dl>
+                                <dt>
+                                    <strong>1</strong>
+                                    <img src="img/logo-bvb.svg" alt="">
+                                </dt>
+                                <dd>
+                                    도르트문트
+                                    <span>84점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>2</strong>
+                                    <img src="img/muin.png" alt="">
+                                </dt>
+                                <dd>
+                                    바이에른 뮌헨
+                                    <span>79점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>3</strong>
+                                    <img src="img/oni.svg" alt="">
+                                </dt>
+                                <dd>
+                                    우니온 베를린
+                                    <span>75점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>4</strong>
+                                    <img src="img/ranking4.png" alt="">
+                                </dt>
+                                <dd>
+                                    프라이부르크
+                                    <span>72점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>5</strong>
+                                    <img src="img/ranking5.png" alt="">
+                                </dt>
+                                <dd>
+                                    라이프치히
+                                    <span>71점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>6</strong>
+                                    <img src="img/ranking6.png" alt="">
+                                </dt>
+                                <dd>
+                                    프랑크푸르트
+                                    <span>68점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>7</strong>
+                                    <img src="img/ranking7.png" alt="">
+                                </dt>
+                                <dd>
+                                    볼프스부르크
+                                    <span>64점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>8</strong>
+                                    <img src="img/ranking8.png" alt="">
+                                </dt>
+                                <dd>
+                                    레버쿠젠
+                                    <span>63점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>9</strong>
+                                    <img src="img/ranking9.png" alt="">
+                                </dt>
+                                <dd>
+                                    마인츠
+                                    <span>61점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>10</strong>
+                                    <img src="img/ranking10.png" alt="">
+                                </dt>
+                                <dd>
+                                    샬케
+                                    <span>58점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>11</strong>
+                                    <img src="img/koln.png" alt="">
+                                </dt>
+                                <dd>
+                                    퀼른
+                                    <span>53점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                        <div class="swiper-slide ">
+                            <dl>
+                                <dt>
+                                    <strong>12</strong>
+                                    <img src="img/ranking12.png" alt="">
+                                </dt>
+                                <dd>
+                                    호펜하임
+                                    <span>49점</span>
+                                </dd>
+                            </dl>                            
+                        </div><!---슬라이더 컨텐--->
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            
+                <div class="nextBtn">
+                    <div class="swiper-button-prev"><</div>
+                    <div class="swiper-button-next">></div>
+                    <div class="Clas"><a href="rankinglist.html">순위 자세히</a></div>
+                </div><!--nextBtn : END-->
+            </div><!--cuver : END-->
+    
+
+
+            </div><!--inner : END-->
+        </section><!--content9 : END-->
+
 
     </main>
+
     <footer>
-        <div class="top">
-            <div class="inner">
+        <section class="footer_con1 skew">
+            <div class="inner skew_n">
                 <ul>
-                    <li><a href="">인기 음식점</a></li>
-                    <li><a href="">네이밍의 팁</a></li>
-                    <li><a href="">신규 점포</a></li>
+                    <li><img src="img/1und1_footer.svg"></li>
+                    <li><img src="img/evonik_footer.svg"></li>
+                    <li><img src="img/puma_footer_3.svg"></li>
+                    <li><img src="img/sip_footer_3.svg"></li>
                 </ul>
             </div><!--inner : END-->
-        </div><!--top: END-->
-        <div class="bottom">
-            <div class="inner">
-                <p>(주)네이밍<span>경기도 시흥시 도창동 184번지</span></p>
-                <strong>Copyright ⓒ ottogi co.,Ltd All Rights Reserved.</strong>
+        </section><!--footer_con1 : END-->
+        <section class="footer_con2 skew">
+            <div class="inner skew_n">
+                <div class="tab_menu">
+                    <ul class="list">
+                        <li class="is_on">
+                            <a href="#tab1" class="btn"><span>BVB</span> 챔피언파트너</a>
+                            <div id="tab1" class="cont">
+                                <ul>
+                                    <li><a href="#"><img src="img/footercon2_1.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_2.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_3.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_4.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_5.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_6.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_7.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_8.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_9.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_10.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon2_11.png" alt=""></a></li>
+                                    <!-- <li><a href="#"><img src="img/footercon2_12.png" alt=""></a></li> -->
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#tab2" class="btn"><span>BVB</span> 프리미엄파트너</a>
+                            <div id="tab2" class="cont">
+                                <ul>
+                                    <li><a href="#"><img src="img/footercon22_1.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_2.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_3.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_4.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_5.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_6.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_7.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_8.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_9.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_10.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_11.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon22_12.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#tab3" class="btn"><span>BVB</span> 파트너</a>
+                            <div id="tab3" class="cont">
+                                <ul>
+                                    <li><a href="#"><img src="img/footercon3_1.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_2.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_3.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_4.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_5.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_6.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_7.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_8.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_9.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_10.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_11.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_12.png" alt=""></a></li>
+                                    <li><a href="#"><img src="img/footercon3_13.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div> 
+                
+                <script>
+                    const tabList = document.querySelectorAll('.tab_menu .list > li');
+                    
+                    for(var i = 0; i < tabList.length; i++){
+                        tabList[i].querySelector('.btn').addEventListener('click', function(e){
+                            e.preventDefault();
+                            for(var j = 0; j < tabList.length; j++){
+                            tabList[j].classList.remove('is_on');
+                            }
+                            this.parentNode.classList.add('is_on');
+                        });
+                        }
+                </script>
+
             </div><!--inner : END-->
-        </div><!--bottom : END-->
+        </section><!--footer_con2 : END-->
+
+        <section class="footer_con3 skew">
+            <div class="inner skew_n">
+                <ul>
+                    <li><a href="#"><img src="img/bl_17_footer.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/ass_logo_eca.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/orthomed.png" alt=""></a></li>
+                </ul>
+            </div><!--inner : END-->
+        </section><!--footer_con3 : END-->
+        <section class="footer_con4 ">
+            <div class="inner ">
+                <p>Borussia Dortmund GmbH & Co. KGaA</p>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Nutzungsbedingungen</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Hilfe</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Infos</a></li>
+                    <li><a href="#">Die KGaA</a></li>
+                    <li><a href="#">Der Verein</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Handball</a></li>
+                    <li><a href="#">Tischtennis</a></li>
+                </ul>
+            </div><!--inner : END-->
+        </section><!--footer_con4 : END-->
     </footer>
-    <div class="topBtn"><i class="fa-solid fa-chevron-up"></i>TOP</div>
     <script src="js/main.js" type="text/javascript"></script>
+
 </body>
 </html>
