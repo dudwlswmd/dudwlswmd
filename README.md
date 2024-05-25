@@ -64,15 +64,9 @@
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=dudwlswmd&show_icons=true&theme=radical)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dudwlswmd&layout=compact)
 
-<h3 align="center">📫 Contact 📫</h3>
+<h3 align="center"><a href="https://songyoungjin.netlify.app/Contact">📫 Contact 📫</a></h3>
 <div align="center">
-  <a href="https://velog.io/@oka1313">
-    <img src="https://img.shields.io/badge/Velog-1EBC8F?style=for-the-badge&logo=velog&logoColor=white" />&nbsp
-  </a>
-  <a href="mailto:oka1313@gmail.com">
-    <img
-      src="https://img.shields.io/badge/oka1313@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp
-  </a>
+
 </div>
 
 
