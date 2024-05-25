@@ -61,7 +61,8 @@
 
 <br>
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=dudwlswmd&show_icons=true&theme=radical)
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=dudwlswmd&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dudwlswmd&layout=compact)
 
 <h3 align="center"><a href="https://songyoungjin.netlify.app">📫 Portfolio - Go!!! 📫</a></h3>
