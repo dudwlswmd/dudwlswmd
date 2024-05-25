@@ -1,4 +1,4 @@
-## Hi, I am Youngjin Song, a web publisher. there 👋
+## Hi👋, I am Youngjin Song, a web publisher.  
 
 
 
