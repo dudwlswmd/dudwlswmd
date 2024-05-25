@@ -64,7 +64,8 @@
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=dudwlswmd&show_icons=true&theme=radical)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dudwlswmd&layout=compact)
 
-<h3 align="center"><a href="https://songyoungjin.netlify.app/Contact">📫 Contact 📫</a></h3>
+<h3 align="center"><a href="https://songyoungjin.netlify.app">📫 Portfolio - Go!!! 📫</a></h3>
+
 <div align="center">
 
 </div>
