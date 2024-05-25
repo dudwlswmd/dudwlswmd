@@ -62,6 +62,7 @@
 <br>
 
 
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=dudwlswmd&show_icons=true&theme=dark)
 
 [![Peter's GitHub stats](https://github-readme-stats.vercel.app/api?username=dudwlswmd)]()
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dudwlswmd&layout=compact)
