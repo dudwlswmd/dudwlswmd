@@ -1,8 +1,10 @@
 ## Hi👋, I am Youngjin Song, a web publisher.  
 
-
+<div align="center">
 ![header](https://capsule-render.vercel.app/api?type=Waving&color=auto&height=200&section=header&text=Young%20Jin&fontSize=60)
-![header](https://capsule-render.vercel.app/api?text=Young%Jin!&fontAlignY=20&World=Desc&descAlignY=40)
+</div>
+
+
 <!--타이틀 부분-->
 <div align="center">
   <img src="https://github.com/oka1313/oka1313/assets/101691440/92118a53-c5b6-40bc-b130-bf8c398d7b51" />
